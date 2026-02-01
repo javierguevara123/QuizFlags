@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cuestionario Banderas</string>
+    <string name="number_of_choices">Número de opciones</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="number_of_choices_description">Muestra 2, 4, 6 u 8 botones de adivinanza</string>
+    <string name="world_regions">Regiones</string>
+    <string name="world_regions_description">Regiones para incluir en el cuestionario</string>
+    <string name="guess_country">Adivina el país</string>
+    <string name="results">%1$d adivina, %2$.02f%% correcto</string>
+    <string name="incorrect_answer">Incorrecto!!!</string>
+    <string name="restarting_quiz">El cuestionario se reiniciará con su nueva configuración</string>
+    <string name="question">" Pregunta %1$d de %2$d"</string>
+    <string name="reset_quiz">Reiniciar Cuestionario</string>
+    <string name="image_description">" Imagen de la bandera actual en el cuestionario"</string>
+    <string name="default_region">Europa</string>
+    <string name="title_activity_settings">" Ajustes"</string>
+</resources>
