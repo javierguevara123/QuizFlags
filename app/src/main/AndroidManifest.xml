@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,26 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name="uta.fisei.App004.androidfunwithflags.MenuActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name="uta.fisei.App004.androidfunwithflags.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="uta.fisei.App004.androidfunwithflags.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uta.fisei.App004.androidfunwithflags.MenuActivity" />
         </activity>
+
         <activity
             android:name="uta.fisei.App004.androidfunwithflags.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="uta.fisei.App004.androidfunwithflags.MainActivity"
+            android:parentActivityName="uta.fisei.App004.androidfunwithflags.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.flagquizapp.androidfunwithflags.uta.example.flagquizapp.androidfunwithflags.MainActivity" />
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 
 </manifest>

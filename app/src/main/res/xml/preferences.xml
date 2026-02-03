@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListPreference
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.ListPreference
         android:entries="@array/guesses_list"
         android:entryValues="@array/guesses_list"
         android:key="pref_numberOfChoices"
         android:title="@string/number_of_choices"
         android:summary="@string/number_of_choices_description"
         android:persistent="true"
-        android:defaultValue="4" />
+        android:defaultValue="4"
+        app:useSimpleSummaryProvider="true" />
 
-    <MultiSelectListPreference
+    <androidx.preference.MultiSelectListPreference
         android:entries="@array/regions_list_for_settings"
         android:entryValues="@array/region_list"
         android:key="pref_regionsToInclude"
@@ -17,4 +21,5 @@
         android:summary="@string/world_regions_description"
         android:persistent="true"
         android:defaultValue="@array/region_list" />
-</PreferenceScreen>
+
+</androidx.preference.PreferenceScreen>
